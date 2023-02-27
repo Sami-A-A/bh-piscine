@@ -1,5 +1,5 @@
 #! /bin/bash
 
-find . -type f -name "*.sh"| sort -r | sed 's/\.sh$//1' | sed 's|^./||'
+find . -type f -name "*.sh" -printf "%f\n" | sort -r | sed 's/\.sh$//1' 
  
  
