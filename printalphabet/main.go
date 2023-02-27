@@ -5,4 +5,5 @@ func main() {
 	for _,e := range "abcdefghijklmnopqrstuvwxyz"{
 		z01.PrintRune(e)
 	}
+	z01.PrintRune('\n')
 }
