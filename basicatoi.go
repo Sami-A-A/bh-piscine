@@ -1,9 +1,5 @@
 package piscine
 
-import (
-	"math"
-)
-
 func BasicAtoi(s string) int {
 	var num int
 	var r string
@@ -18,7 +14,12 @@ func BasicAtoi(s string) int {
 		if (int(runes[i]) - 48) == 0 {
 			continue
 		} else {
-			num = (int(runes[i]) - 48) * int(math.Pow(10, float64(i)))
+			// create exponent function
+			var power int = 10
+			for j := 0; j < i; j++ {
+				power *= 10
+			}
+			num = num + (int(runes[i])-48)*(power/10)
 		}
 	}
 	return num
