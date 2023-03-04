@@ -6,6 +6,6 @@ import (
 )
 
 func main() {
-	arg1 := 17
+	arg1 := 0
 	fmt.Println(piscine.Fibonacci(arg1))
 }
