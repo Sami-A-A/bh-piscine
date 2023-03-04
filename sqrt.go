@@ -1,12 +1,12 @@
 package piscine
 
-import "math"
-
 func Sqrt(nb int) int {
-	sr := math.Sqrt(float64(nb))
-	if int(sr)*int(sr) == nb {
-		return int(sr)
-	} else {
-		return 0
+	i := 0
+	for i < nb {
+		i++
+		if i*i == nb {
+			return i
+		}
 	}
+	return 0
 }
