@@ -6,5 +6,5 @@ import (
 )
 
 func main() {
-	fmt.Println(piscine.IterativePower(10, 2))
+	fmt.Println(piscine.IterativePower(-10, 3))
 }
