@@ -1,6 +1,6 @@
 package piscine
 
-var a, b = 0, 1
+var a, b, c = 0, 1, 0
 
 func Fibonacci(index int) int {
 	if index < 0 {
@@ -8,7 +8,8 @@ func Fibonacci(index int) int {
 	} else if index == 0 {
 		return 0
 	}
-	a, b = b, a+b
+	c = a + b
+	a, b = b, c
 	Fibonacci(index - 1)
 	return a
 }
