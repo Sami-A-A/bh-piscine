@@ -1,11 +1,13 @@
 package piscine
 
+import "unicode/utf8"
+
 func NRune(s string, n int) rune {
-	a := []rune(s)
-	y := n - 1
-	if y < len(a)-1 && y >= 0 {
-		return a[y]
+	ar := []rune(s)
+
+	if n < len(ar){
+		return ar[n]
 	} else {
-		return 0
+		return '0'
 	}
 }
