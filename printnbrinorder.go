@@ -16,13 +16,19 @@ func PrintNbrInOrder(n int) {
 			n -= int(n/x) * x
 			x = 1
 		}
+		if x > n {
+			break
+		}
 	}
-	for i := 0; i < 1; i++ {
+	for i := 0; i < 10; i++ {
 		for j := 0; j < 5; j++ {
 			if int(a[j]) == i {
 				z01.PrintRune(a[j] + 48)
 				break
 			}
+		}
+		if i == 10 {
+			break
 		}
 	}
 }
