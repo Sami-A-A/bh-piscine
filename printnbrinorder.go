@@ -5,6 +5,8 @@ import "github.com/01-edu/z01"
 func PrintNbrInOrder(n int) {
 	if n == 0 {
 		z01.PrintRune('0')
+	} else {
+		z01.PrintRune('1')
 	}
 	var a []rune
 	for x := 1; n > 0; x *= 10 {
@@ -21,7 +23,7 @@ func PrintNbrInOrder(n int) {
 		}
 	}
 	for i := 0; i < 10; i++ {
-		for j := 0; j < 5; j++ {
+		for j := 0; j < len(a); j++ {
 			if int(a[j]) == i {
 				z01.PrintRune(a[j] + 48)
 				break
