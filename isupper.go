@@ -1,19 +1,14 @@
 package piscine
 
-func ToUpper(s string) string {
-	alr := []rune(s)
-	res := []rune{}
+func IsUpper(s string) bool {
+	rune := []rune(s)
+	counter := 0
 
-	for j := 0; j <= len(alr)-1; j++ {
-		for k := 'A'; k <= 'Z'; k++ {
-			if alr[j] >= 'a' && alr[j] <= 'z' {
-				res = append(res, alr[j]-32)
-				break
-			} else {
-				res = append(res, alr[j])
-				break
-			}
+	for i := 0; i <= len(rune)-1; i++ {
+		if rune[i] >= 'A' && rune[i] <= 'Z' {
+			counter++
 		}
 	}
-	return string(res)
+
+	return counter == len(rune)
 }
