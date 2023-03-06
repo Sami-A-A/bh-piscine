@@ -10,7 +10,7 @@ func PrintNbrInOrder(n int) {
 	for x := 1; n > 0; x *= 10 {
 		if n < 10 {
 			a = append(a, rune(n))
-			n = 0
+			break
 		} else if x*10 > n {
 			a = append(a, rune(int(n/x)))
 			n -= int(n/x) * x
@@ -18,9 +18,9 @@ func PrintNbrInOrder(n int) {
 		}
 	}
 	for i := 0; i < 10; i++ {
-		for _, e := range a {
-			if int(e) == i {
-				z01.PrintRune(e + 48)
+		for j := 0; j < len(a); j++ {
+			if int(a[j]) == i {
+				z01.PrintRune(a[j] + 48)
 				break
 			}
 		}
