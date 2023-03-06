@@ -17,9 +17,7 @@ func Index(s string, toFind string) int {
 					}
 				}
 			}
-		} else if a[i] != b[0] && i-1 == len(a) {
-			return -1
 		}
 	}
-	return index
+	return -1
 }
