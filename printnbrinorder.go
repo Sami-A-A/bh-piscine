@@ -5,8 +5,6 @@ import "github.com/01-edu/z01"
 func PrintNbrInOrder(n int) {
 	if n == 0 {
 		z01.PrintRune('0')
-	} else {
-		z01.PrintRune('1')
 	}
 	var a []rune
 	for x := 1; n > 0; x *= 10 {
@@ -18,19 +16,14 @@ func PrintNbrInOrder(n int) {
 			n -= int(n/x) * x
 			x = 1
 		}
-		if x > n {
-			break
-		}
 	}
-	for i := 0; i < 10; i++ {
-		for j := 0; j < len(a); j++ {
-			if int(a[j]) == i {
-				z01.PrintRune(a[j] + 48)
-				break
-			}
-		}
-		if i == 10 {
-			break
-		}
-	}
+	z01.PrintRune(a[0])
+	// for i := 0; i < 10; i++ {
+	// 	for _, e := range a {
+	// 		if int(e) == i {
+	// 			z01.PrintRune(e + 48)
+	// 			break
+	// 		}
+	// 	}
+	// }
 }
