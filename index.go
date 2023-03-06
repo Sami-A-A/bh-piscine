@@ -1,20 +1,20 @@
 package piscine
 
 func Index(s string, toFind string) int {
-	a := []rune(s)
-	b := []rune(toFind)
+	a, b := []rune(s), []rune(toFind)
 	var index, match int
 	for i := 0; i < len(a); i++ {
 		if a[i] == b[0] {
 			index = i
-			for j := 0; j < len(b); i, j = i+1, j+1 {
-				if a[i] == b[j] {
+			match = 0
+			for j, k := 0, i; j < len(b); j, k = j+1, k+1 {
+				if a[k] == b[j] {
 					match++
 					if match == len(b) {
 						return index
-					} else {
-						continue
 					}
+				} else {
+					break
 				}
 			}
 		}
