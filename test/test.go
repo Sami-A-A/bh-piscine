@@ -5,5 +5,5 @@ import "piscine"
 func main() {
 	piscine.PrintNbrInOrder(321)
 	piscine.PrintNbrInOrder(0)
-	piscine.PrintNbrInOrder(3457612389)
+	piscine.PrintNbrInOrder('1')
 }
