@@ -1,14 +1,10 @@
 package piscine
 
 func IsUpper(s string) bool {
-	rune := []rune(s)
-	counter := 0
-
-	for i := 0; i <= len(rune)-1; i++ {
-		if rune[i] >= 'A' && rune[i] <= 'Z' {
-			counter++
+	for _, e := range s {
+		if e > 'Z' || e < 'A' {
+			return false
 		}
 	}
-
-	return counter == len(rune)
+	return true
 }
