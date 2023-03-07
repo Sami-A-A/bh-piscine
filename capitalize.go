@@ -11,7 +11,7 @@ func Capitalize(s string) string {
 			initial = false
 		} else if a[i] >= 'A' && a[i] <= 'Z' && !initial {
 			a[i] = e + 32
-		} else if (a[i] < 'a' || a[i] > 'z') && (a[i] < 'A' || a[i] > 'Z') {
+		} else if (a[i] < 'a' || a[i] > 'z') && (a[i] < 'A' || a[i] > 'Z') && (a[i] < 48 || a[i] > 57) {
 			initial = true
 		}
 	}
