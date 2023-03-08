@@ -6,5 +6,5 @@ import (
 )
 
 func main() {
-	fmt.Printf("%#v\n", piscine.SplitWhiteSpaces("xhRs([HhB9,yd kUv{TK.9wNZpC qO6;w.k1X$+l( +n p{o.`ptyuw 3--QXO>j7vN/4 )z{/[Urs)p,YN 0>Qcz0>#3/v5J )XX(##cn3U7y "))
+	fmt.Printf("%#v\n", piscine.SplitWhiteSpaces("7z]hWoQybNxlK nY^kT).+^t9 ~ WqR%Z#1S$#h&C 5g XcR%V|R`&  ~Z`b-Ab3%K?9n SQe6<]X=Eh|Em Qn]:u; 9=qIh7 %btp?8FtZdz61 "))
 }
