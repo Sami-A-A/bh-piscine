@@ -20,5 +20,6 @@ func Split(s, sep string) []string {
 			word, x = "", x+len(sep)-1
 		}
 	}
+	str_slc = append(str_slc, word)
 	return str_slc
 }
