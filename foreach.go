@@ -1,7 +1,9 @@
 package piscine
 
+import "github.com/01-edu/z01"
+
 func PrintNbr(nbr int) {
-	print(nbr)
+	z01.PrintRune(rune(nbr))
 }
 
 func ForEach(f func(int), a []int) {
