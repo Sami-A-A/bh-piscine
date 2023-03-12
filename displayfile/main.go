@@ -20,6 +20,6 @@ func main() {
 	}
 	arr := make([]byte, 14)
 	file.Read(arr)
-	fmt.Println(arr)
+	fmt.Println(string(arr))
 	file.Close()
 }
