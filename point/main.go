@@ -16,11 +16,16 @@ func main() {
 	points := &point{}
 	setPoint(points)
 	x1, x2, y1, y2 := points.x+10, points.x+8, points.y+29, points.y+28
-	arr := []string{"x = ", string(x1), string(x2), ", y = ", string(y1), string(y2)}
-	for _, s := range arr {
-		for _, e := range s {
-			z01.PrintRune(e)
+	rns := []int{x1, x2, y1, y2}
+	str := "x = v, y = v"
+	for _, e := range str {
+		if e == 'v' {
+			for _, r := range rns{
+				z01.PrintRune(rune(r))
+			}
+			continue
 		}
+		z01.PrintRune(e)
 	}
 	z01.PrintRune('\n')
 }
