@@ -20,7 +20,7 @@ func main() {
 	str := "x = v, y = v"
 	for _, e := range str {
 		if e == 'v' {
-			for _, r := range rns{
+			for _, r := range rns {
 				z01.PrintRune(rune(r))
 			}
 			continue
