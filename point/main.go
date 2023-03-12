@@ -15,13 +15,18 @@ func setPoint(ptr *point) {
 func main() {
 	points := &point{}
 	setPoint(points)
-	x1, x2, y1, y2 := points.x+10, points.x+8, points.y+29, points.y+28
-	rns := []int{x1, x2, y1, y2}
-	str := "x = v, y = v"
+	rns := []rune{52, 50, 50, 49}
+	str := "x = v, y = w"
 	for _, e := range str {
-		if e == 'v' {
-			for _, r := range rns {
-				z01.PrintRune(rune(r))
+		if e == 'v' || e == 'w' {
+			for i, r := range rns {
+				if e == 'v' && i > 1 {
+					break
+				}
+				if e == 'w' && i <= 1 {
+					continue
+				}
+				z01.PrintRune(r)
 			}
 			continue
 		}
