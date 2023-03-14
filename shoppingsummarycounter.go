@@ -5,7 +5,7 @@ func ShoppingSummaryCounter(str string) map[string]int {
 	list := make(map[string]int)
 	var item string
 	for _, e := range itembytes {
-		if e == 32 && item != "" {
+		if e == 32 {
 			list[item] += 1
 			item = ""
 		} else if e != 32 {
