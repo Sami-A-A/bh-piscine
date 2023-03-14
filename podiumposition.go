@@ -1,9 +1,8 @@
 package piscine
 
 func PodiumPosition(podium [][]string) [][]string {
-	podium[0][0] = "1st Place"
-	podium[1][0] = "2nd Place"
-	podium[2][0] = "3rd Place"
-	podium[3][0] = "4th Place"
+	for i, j := 0, len(podium)-1; i < len(podium)/2; i, j = i+1, j-1 {
+		podium[i], podium[j] = podium[j], podium[i]
+	}
 	return podium
 }
