@@ -6,8 +6,7 @@ import (
 )
 
 func main() {
-	summary := "Burger Water Carrot Coffee Water Water Chips Carrot Carrot Burger Carrot Water"
-	for index, element := range piscine.ShoppingSummaryCounter(summary) {
-		fmt.Println(index, "=>", element)
-	}
+	fmt.Println(piscine.StringToIntSlice("A quick brown fox jumps over the lazy dog"))
+	fmt.Println(piscine.StringToIntSlice("Converted this string into an int"))
+	fmt.Println(piscine.StringToIntSlice("hello THERE"))
 }
