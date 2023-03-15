@@ -10,6 +10,7 @@ func PrintStr(s string) {
 	for _, r := range s {
 		z01.PrintRune(r)
 	}
+	z01.PrintRune('\n')
 }
 
 func OpenDoor(ptrDoor *Door) bool {
@@ -19,7 +20,7 @@ func OpenDoor(ptrDoor *Door) bool {
 
 func CloseDoor(ptrDoor *Door) bool {
 	PrintStr("Door Closing...")
-	return !ptrDoor.state
+	return ptrDoor.state
 }
 
 func IsDoorOpen(ptrDoor *Door) bool {
@@ -29,7 +30,7 @@ func IsDoorOpen(ptrDoor *Door) bool {
 
 func IsDoorClose(ptrDoor *Door) bool {
 	PrintStr("is the Door closed ?")
-	return !ptrDoor.state
+	return ptrDoor.state
 }
 
 func main() {
@@ -41,7 +42,7 @@ func main() {
 	if IsDoorOpen(door) {
 		CloseDoor(door)
 	}
-	if door.state {
+	if !door.state {
 		CloseDoor(door)
 	}
 }
